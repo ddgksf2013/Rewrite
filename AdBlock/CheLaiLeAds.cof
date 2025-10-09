@@ -11,7 +11,7 @@
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         使用前请卸载汽水音乐，挂载脚本然后使用
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.1
+// @Version           V1.0.2
 // @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/CheLaiLeAds.cof
 // ==/UserScript==
 
@@ -20,15 +20,15 @@ hostname = web.chelaile.net.cn, api.chelaile.net.cn, cdn.api.chelaile.net.cn,cdn
 
 
 # > 我的页面@ddgksf2013
-https://.*chelaile\.net\.cn\/goocity\/flowPos\/listByPos url reject
+^https?:\/\/.*chelaile\.net\.cn\/goocity\/flowPos\/listByPos url reject
 # > 详情页@ddgksf2013
 ^https?:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html url reject-200
 # > 通用广告@ddgksf2013
 ^https?:\/\/.*chelaile\.net\.cn\/(api\/)?adpub url reject-200
 # > IPdir处理@ddgksf2013
-^https:\/\/124\.70\.194\.16\/(ip|adpub) url reject-200
+^https?:\/\/124\.70\.194\.16\/(ip|adpub) url reject-200
 # > 我的页面@ddgksf2013
-^https:\/\/124\.70\.194\.16\/goocity\/flowPos\/listByPos url reject-200
+^https?:\/\/124\.70\.194\.16\/goocity\/flowPos\/listByPos url reject-200
 # > 去除底栏@ddgksf2013
 ^https?:\/\/.*chelaile\.net\.cn\/goocity\/city! url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/chelaile.js
 # > 公交详情页@ddgksf2013
