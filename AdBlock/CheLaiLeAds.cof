@@ -1,0 +1,37 @@
+// ==UserScript==
+// @ScriptName        车来了(小程序)净化[墨鱼版]
+// @Author            @ddgksf2013
+// @Function          如果有需要的去除广告的APP，可自行在共享表格中添加需求
+// @AddRequest        https://bit.ly/addRequestforAdBlock
+// @WechatID          墨鱼手记
+// @TgChannel         https://t.me/ddgksf2021
+// @Contribute        https://t.me/ddgksf2013_bot
+// @Feedback          📮 ddgksf2013@163.com 📮
+// @UpdateTime        2025-10-09
+// @Suitable          自行观看“# > ”注释内容
+// @Attention         使用前请卸载汽水音乐，挂载脚本然后使用
+// @Attention         如需引用请注明出处，谢谢合作！
+// @Version           V1.0.1
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/CheLaiLeAds.cof
+// ==/UserScript==
+
+
+hostname = web.chelaile.net.cn, api.chelaile.net.cn, cdn.api.chelaile.net.cn,cdn.web.chelaile.net.cn, atrace.chelaile.net.cn
+
+
+# > 我的页面@ddgksf2013
+https://.*chelaile\.net\.cn\/goocity\/flowPos\/listByPos url reject
+# > 详情页@ddgksf2013
+^https?:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html url reject-200
+# > 通用广告@ddgksf2013
+^https?:\/\/.*chelaile\.net\.cn\/(api\/)?adpub url reject-200
+# > IPdir处理@ddgksf2013
+^https:\/\/124\.70\.194\.16\/(ip|adpub) url reject-200
+# > 我的页面@ddgksf2013
+^https:\/\/124\.70\.194\.16\/goocity\/flowPos\/listByPos url reject-200
+# > 去除底栏@ddgksf2013
+^https?:\/\/.*chelaile\.net\.cn\/goocity\/city! url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/chelaile.js
+# > 公交详情页@ddgksf2013
+^https?:\/\/web\.chelaile\.net\.cn\/api\/operative_position\/infoflow url reject-200
+# > 隐私跟踪@ddgksf2013
+^https?:\/\/atrace\.chelaile\.net\.cn\/(wx_preloadAd|adAnalysis) url reject-200
